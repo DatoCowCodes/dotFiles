@@ -1,0 +1,11 @@
+stow
+telegram
+kitty
+jetbrains-mono-fonts
+fuse fuse-libs
+fontawesome-fonts-all
+git
+discord
+steam -y
+fontawesome-fonts
+vim
