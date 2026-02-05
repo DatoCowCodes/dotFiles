@@ -13,3 +13,7 @@ To seed config files run:
 To remove existing symlinks run:
 
 `stow -D -t ~ <machine>`
+
+To get a list of user installed dnf packages:
+
+`dnf history list`
