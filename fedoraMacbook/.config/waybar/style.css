@@ -1,0 +1,241 @@
+/* Import Catppuccin Frappé colors */
+@import "frappe.css";
+
+/* Base waybar styling */
+* {
+    font-family: "DejaVu Sans", "Liberation Sans", "Noto Sans", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: @base;
+    color: @text;
+    border-bottom: 2px solid @surface0;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Tooltip styling */
+tooltip {
+    background-color: @mantle;
+    border: 1px solid @surface0;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @text;
+}
+
+/* Common module styling */
+#workspaces,
+#mode,
+#scratchpad,
+#window,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#idle_inhibitor,
+#power-profiles-daemon,
+#language {
+    padding: 0 10px;
+    margin: 3px 2px;
+    border-radius: 6px;
+    background-color: @surface0;
+    color: @text;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: @subtext0;
+    border-radius: 6px;
+    margin: 3px 2px;
+}
+
+#workspaces button:hover {
+    background-color: @surface1;
+    color: @text;
+}
+
+#workspaces button.focused {
+    background-color: @mauve;
+    color: @base;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+    color: @base;
+}
+
+/* Mode (resize, etc.) */
+#mode {
+    background-color: @peach;
+    color: @base;
+    font-weight: bold;
+}
+
+/* Scratchpad */
+#scratchpad {
+    background-color: @sapphire;
+    color: @base;
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+
+/* Window title */
+#window {
+    background-color: transparent;
+    color: @text;
+    font-weight: bold;
+}
+
+/* Clock */
+#clock {
+    background-color: @sapphire;
+    color: @base;
+    font-weight: bold;
+}
+
+/* Battery */
+#battery {
+    background-color: @blue;
+    color: @base;
+}
+
+#battery.charging, #battery.plugged {
+    background-color: @blue;
+    color: @base;
+}
+
+#battery.warning:not(.charging) {
+    background-color: @yellow;
+    color: @base;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @red;
+    color: @base;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: @maroon;
+    }
+}
+
+/* CPU */
+#cpu {
+    background-color: @blue;
+    color: @base;
+}
+
+/* Memory */
+#memory {
+    background-color: @blue;
+    color: @base;
+}
+
+/* Temperature */
+#temperature {
+    background-color: @blue;
+    color: @base;
+}
+
+#temperature.critical {
+    background-color: @red;
+    color: @base;
+}
+
+/* Backlight */
+#backlight {
+    background-color: @blue;
+    color: @base;
+}
+
+/* Network */
+#network {
+    background-color: @blue;
+    color: @base;
+}
+
+#network.disconnected {
+    background-color: @red;
+    color: @base;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+    background-color: @blue;
+    color: @base;
+}
+
+#pulseaudio.muted {
+    background-color: @overlay0;
+    color: @text;
+}
+
+/* Idle inhibitor */
+#idle_inhibitor {
+    background-color: @blue;
+    color: @base;
+}
+
+#idle_inhibitor.activated {
+    background-color: @peach;
+    color: @base;
+}
+
+/* Power profiles */
+#power-profiles-daemon {
+    background-color: @blue;
+    color: @base;
+}
+
+#power-profiles-daemon.performance {
+    background-color: @red;
+    color: @base;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: @blue;
+    color: @base;
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: @green;
+    color: @base;
+}
+
+/* Language */
+#language {
+    background-color: @blue;
+    color: @base;
+}
+
+/* Tray */
+#tray {
+    background-color: @blue;
+    color: @base;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red;
+}
