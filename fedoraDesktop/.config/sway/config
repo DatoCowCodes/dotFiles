@@ -31,19 +31,21 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg ~/Downloads/flatppuccin_4k_macchiato_inverted.png fill
+output * bg ~/Pictures/Backgrounds/catppuccin_background.png fill
 
 # set display port to be left monitor and hdmi to be right monitor
-output DP-2 pos 0 0 mode 2560x1440 
+output DP-3 pos 0 0 mode 2560x1440 
 output HDMI-A-1 pos 2560 0 mode 2560x1440
 
 #set workspaces per monitor
-workspace 1 output DP-2
-workspace 2 output DP-2
-workspace 3 output DP-2
-workspace 4 output HDMI-A-1
+workspace 1 output DP-3
+workspace 2 output DP-3
+workspace 3 output DP-3
+workspace 4 output DP-3
 workspace 5 output HDMI-A-1
 workspace 6 output HDMI-A-1
+workspace 7 output HDMI-A-1
+workspace 8 output HDMI-A-1
 
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -83,7 +85,7 @@ workspace 6 output HDMI-A-1
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+Shift+c kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -96,10 +98,10 @@ workspace 6 output HDMI-A-1
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+p reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -132,10 +134,10 @@ workspace 6 output HDMI-A-1
     bindsym $mod+2 workspace number 2
     bindsym $mod+3 workspace number 3
     bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
+    bindsym $mod+q workspace number 5
+    bindsym $mod+w workspace number 6
+    bindsym $mod+e workspace number 7
+    bindsym $mod+r workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
     # Move focused container to workspace
@@ -143,10 +145,10 @@ workspace 6 output HDMI-A-1
     bindsym $mod+Shift+2 move container to workspace number 2
     bindsym $mod+Shift+3 move container to workspace number 3
     bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+q move container to workspace number 5
+    bindsym $mod+Shift+w move container to workspace number 6
+    bindsym $mod+Shift+e move container to workspace number 7
+    bindsym $mod+Shift+r move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
@@ -161,9 +163,9 @@ workspace 6 output HDMI-A-1
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+z layout stacking
+    bindsym $mod+x layout tabbed
+    bindsym $mod+c layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -211,7 +213,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+m mode "resize"
 
 
 # Rice
